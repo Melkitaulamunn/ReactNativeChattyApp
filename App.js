@@ -8,7 +8,8 @@ import {Text} from "react-native";
 import {Ionicons} from "@expo/vector-icons"
 import Chats from "./screens/Chats";
 import Settings from "./screens/Settings";
-import {colors} from "./config/constants"
+import {colors} from "./config/constants";
+import SignUp from "./screens/SignUp";
 
 
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
 
   const Tabs = createBottomTabNavigator()
 
-  function MyTabs(){
+  function TabsScreen(){
     return(
       <Tabs.Navigator 
       screenOptions={({ route }) => ({
@@ -52,8 +53,9 @@ const MainStack= createNativeStackNavigator()
   
   return (
     <NavigationContainer>
-      <MainStack.Navigator>
-      <MainStack.Screen options={{headerShown:false}} name="MyTabs" component={MyTabs}/>
+      <MainStack.Navigator screenOptions={{ presentation: 'modal', headerShown:false}} >
+          <MainStack.Screen  name="Tabs" component={TabsScreen}/>
+          <MainStack.Screen  name="SignUp" component={SignUp}/>
         </MainStack.Navigator>
      
     </NavigationContainer>

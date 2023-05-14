@@ -16,6 +16,8 @@ const ContactRow = ({ name, subtitle, onPress,style }) => {
                 <Text style={styles.name}> {name} </Text>
                 <Text style={styles.subtitle}>{subtitle} </Text>
             </View>
+            <Ionicons name="chevron-forward-outline" size={20}/>
+            
         </TouchableOpacity>
     )
 
