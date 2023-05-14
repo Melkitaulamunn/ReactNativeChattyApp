@@ -15,12 +15,12 @@ const SignUp = () =>{
                     <TextInput styles={styles.input} placeholder="Enter your e-mail"/>
                     <TextInput styles={styles.input} placeholder="Enter your password"/>
                     <View styles={styles.buttonContainer}>
-                        <TouchableOpacity>
+                        <TouchableOpacity style={styles.buttonContainer}>
                             <Text style={styles.buttonLabel}>Sign In </Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity>
-                            <Text style={styles.buttonLabel}>Sign In </Text>
+                        <TouchableOpacity style={styles.buttonContainer}>
+                            <Text style={styles.buttonLabel}>Sign UP</Text>
                         </TouchableOpacity>
                     </View>
 
