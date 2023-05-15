@@ -1,6 +1,7 @@
 import React from "react";
 import {Text,SafeAreaView,StyleSheet,View,TextInput,TouchableOpacity} from "react-native";
 import { colors } from "../config/constants";
+import Button from "../components/Button";
 
 
 const SignUp = () =>{
@@ -8,20 +9,15 @@ const SignUp = () =>{
     return(
         <View style={styles.container} >
             <SafeAreaView>
-                <View styles={styles.contentContainer}>
+                <View style={styles.contentContainer}>
            
-                    <Text>Create New Account</Text>
-                    <TextInput styles={styles.input} placeholder="Enter your name"/>
-                    <TextInput styles={styles.input} placeholder="Enter your e-mail"/>
-                    <TextInput styles={styles.input} placeholder="Enter your password"/>
-                    <View styles={styles.buttonContainer}>
-                        <TouchableOpacity style={styles.buttonContainer}>
-                            <Text style={styles.buttonLabel}>Sign In </Text>
-                        </TouchableOpacity>
-
-                        <TouchableOpacity style={styles.buttonContainer}>
-                            <Text style={styles.buttonLabel}>Sign UP</Text>
-                        </TouchableOpacity>
+                    <Text style={styles.title}>Create New Account</Text>
+                    <TextInput style={styles.input} placeholder="Enter your name"/>
+                    <TextInput style={styles.input} placeholder="Enter your e-mail"/>
+                    <TextInput style={styles.input} placeholder="Enter your password"/>
+                    <View style={styles.buttonsContainer}>
+                        <Button title="Sign In" varient="secondary"/>
+                        <Button title="Sign Up" varient="primary"/>
                     </View>
 
                 </View>
@@ -49,7 +45,7 @@ const styles= StyleSheet.create({
     title: { 
         fontSize: 36, 
         color: "white",
-        fontWeight: 16
+        fontWeight: "800"
     },
     input: { 
         backgroundColor: "white",
@@ -60,22 +56,12 @@ const styles= StyleSheet.create({
         borderRadius: 6,
     },
     buttonsContainer: {
-        flexirection: "row",
+        flexDirection:"row",
         justifyContent: "space-between",
         marginTop:32
     },
 
-    buttonLabel:{
-        color:"white",
-        fontsize:18
-    },
-    buttonContainer: {
-    backgroundColor: "black",
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    borderRadius: 6,
-}
-
+    
 })
 
 export default SignUp

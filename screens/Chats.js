@@ -3,14 +3,7 @@ import { View, SafeAreaView, StyleSheet ,Text} from "react-native";
 import ContactRow from "../components/ContactRow";
 
 const Chats = ({navigation}) => {
-    useEffect(() => {
-        const isLoggendIn = false;
-        if (!isLoggendIn){
-            navigation.navigate("SignUp");
-
-        }
-
-    },[])
+   
     return (
         <SafeAreaView>
            <ContactRow
