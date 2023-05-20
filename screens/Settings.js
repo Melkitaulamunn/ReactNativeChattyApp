@@ -5,6 +5,8 @@ import Separator from "../components/Separator";
 import { colors } from "../config/constants";
 import Cell from "../components/Cell"
 
+import {auth} from '../App'
+
 
 
 const Settings = () => {
@@ -22,7 +24,11 @@ const Settings = () => {
             icon="log-out-outline"
             tintColor={colors.red}
             onPress={() => {
-                alert("Don't touch me again")
+               
+                auth.signOut().then(()=>console.log('çıktı')).catch((error)=>console.log(error))
+
+
+
             }} 
             />
 
